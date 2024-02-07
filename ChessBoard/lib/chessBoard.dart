@@ -16,7 +16,7 @@ class Chessboard extends StatelessWidget {
       ),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
-        children: List.generate(7, (int index) {
+        children: List.generate(5, (int index) {
           return rowWidget(index + 1);
         }),
       ),
@@ -24,7 +24,7 @@ class Chessboard extends StatelessWidget {
   }
 
   Row rowWidget(int rowNumber) {
-    if (rowNumber == 1 || rowNumber == 7) {
+    if (rowNumber == 1 || rowNumber == 5) {
       return Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
@@ -36,7 +36,7 @@ class Chessboard extends StatelessWidget {
           iconWidget(Colors.white, Colors.black),
         ],
       );
-    } else if (rowNumber % 2 == 0) {
+    } else if (rowNumber % 3 == 0) {
       return Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
